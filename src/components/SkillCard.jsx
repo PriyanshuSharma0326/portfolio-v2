@@ -15,7 +15,14 @@ const defaultOptions = {
 
 function SkillCard({ icon, title }) {
     return (
-        <div className='flex flex-col gap-2 items-center'>
+        <div className='
+            flex 
+            flex-col 
+            gap-2 
+            items-center
+            
+            max-[1024px]:gap-1'
+        >
             <Tilt options={defaultOptions} className='
                 skill-card 
                 custom-gradient
@@ -28,14 +35,32 @@ function SkillCard({ icon, title }) {
                 cursor-pointer
                 
                 self-center
-                justify-self-center'
+                justify-self-center
+                
+                max-[1024px]:w-[5rem] 
+                max-[1024px]:h-[5rem]'
             >
-                <div className="w-full h-full flex items-center justify-center">
-                    <img className='w-[48%]' src={require(`../assets/${icon}`)} alt={title} />
+                <div className="
+                    w-full 
+                    h-full 
+                    flex 
+                    items-center 
+                    justify-center"
+                >
+                    <img src={require(`../assets/${icon}`)} alt={title} className='
+                        w-[48%]
+                        
+                        max-[1024px]:w-[42%]'
+                    />
                 </div>
             </Tilt>
 
-            <span className='text-[#45FFCA] text-[0.85rem]'>{title}</span>
+            <span className='
+                text-[#45FFCA] 
+                text-[0.85rem]
+                
+                max-[1024px]:text-[0.75rem]'
+            >{title}</span>
         </div>
     )
 }

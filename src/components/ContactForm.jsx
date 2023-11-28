@@ -1,8 +1,9 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 function ContactForm() {
     return (
-        <div className='h-full w-full border-2 border-[#FAFAFA78] rounded-md px-8 py-6 flex flex-col gap-6 bg-[#001C30]'>
+        <Element className='h-full w-full border-2 border-[#FAFAFA78] rounded-md px-8 py-6 flex flex-col gap-6 bg-[#001C30]' name='Contact' id='Contact'>
             <h1 className='text-[#FAFAFA] uppercase font-bold text-[2.75rem]'>Contact Me</h1>
 
             <form action="" className='h-full flex flex-col justify-between'>
@@ -23,7 +24,7 @@ function ContactForm() {
 
                 <button className='bg-[#45FFCA] text-[#001C30] rounded-md px-[1.25rem] py-[0.65rem] font-semibold text-[0.95rem] uppercase'>Send</button>
             </form>
-        </div>
+        </Element>
     )
 }
 
