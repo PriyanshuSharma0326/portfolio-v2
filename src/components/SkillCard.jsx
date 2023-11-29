@@ -21,7 +21,9 @@ function SkillCard({ icon, title }) {
             gap-2 
             items-center
             
-            max-[1024px]:gap-1'
+            max-[1024px]:gap-1
+            
+            max-[768px]:gap-2'
         >
             <Tilt options={defaultOptions} className='
                 skill-card 
@@ -32,13 +34,18 @@ function SkillCard({ icon, title }) {
                 rounded-3xl
                 w-[6.25rem]
                 h-[6.25rem]
-                cursor-pointer
                 
                 self-center
                 justify-self-center
                 
                 max-[1024px]:w-[5rem] 
-                max-[1024px]:h-[5rem]'
+                max-[1024px]:h-[5rem]
+                
+                max-[768px]:w-[6.25rem]
+                max-[768px]:h-[6.25rem]
+                
+                max-[426px]:w-[5.75rem]
+                max-[426px]:h-[5.75rem]'
             >
                 <div className="
                     w-full 
@@ -50,7 +57,9 @@ function SkillCard({ icon, title }) {
                     <img src={require(`../assets/${icon}`)} alt={title} className='
                         w-[48%]
                         
-                        max-[1024px]:w-[42%]'
+                        max-[1024px]:w-[42%]
+                        
+                        max-[768px]:w-[48%]'
                     />
                 </div>
             </Tilt>
@@ -59,7 +68,11 @@ function SkillCard({ icon, title }) {
                 text-[#45FFCA] 
                 text-[0.85rem]
                 
-                max-[1024px]:text-[0.75rem]'
+                max-[1024px]:text-[0.75rem]
+                
+                max-[768px]:text-[0.85rem]
+                
+                max-[426px]:text-[0.9rem]'
             >{title}</span>
         </div>
     )

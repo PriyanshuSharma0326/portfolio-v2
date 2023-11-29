@@ -17,12 +17,28 @@ function ProjectCard({ project }) {
             flex 
             hover:bg-[#BABABA11] 
             hover:border-[#FAFAFA23] 
-            hover:cursor-pointer"
+            
+            max-[1024px]:px-2
+            max-[1024px]:py-4
+            
+            max-[768px]:px-4
+            max-[768px]:py-6
+            
+            max-[426px]:px-2
+            max-[426px]:py-4"
         >
             <div className="
                 image-con 
                 w-[40%] 
-                px-2"
+                px-2
+                
+                max-[1024px]:w-[37.5%] 
+                max-[1024px]:px-1
+                
+                max-[768px]:w-[35%]
+                max-[768px]:px-2
+                
+                max-[426px]:px-1"
             >
                 <img 
                     src={project.project_image} alt={project.project_title} className='
@@ -36,8 +52,11 @@ function ProjectCard({ project }) {
                 w-[60%] 
                 flex 
                 flex-col 
-                gap-3 
-                pl-2"
+                pl-2
+                
+                max-[1024px]:w-[62.5%]
+                
+                max-[768px]:w-[65%]"
             >
                 <div className="
                     header 
@@ -49,7 +68,13 @@ function ProjectCard({ project }) {
                         title 
                         text-[1.1rem]
                         font-semibold 
-                        text-[#FAFAFA]"
+                        text-[#FAFAFA]
+                        
+                        max-[1024px]:text-[0.95rem]
+                        
+                        max-[768px]:text-[1.2rem]
+                        
+                        max-[426px]:text-[1.25rem]"
                     >{project.project_title}
                     </h1>
 
@@ -57,7 +82,11 @@ function ProjectCard({ project }) {
                         links 
                         flex 
                         gap-6 
-                        items-center"
+                        items-center
+                        
+                        max-[1024px]:gap-4
+                        
+                        max-[768px]:gap-6"
                     >
                         <a href={project.source_url} target='_blank' rel='noreferrer' className='
                             flex 
@@ -68,7 +97,10 @@ function ProjectCard({ project }) {
                                 text-[1.25rem] 
                                 text-[#45ffcacc] 
                                 hover:text-[#45FFCA] 
-                                hover:cursor-pointer'
+                                
+                                max-[1024px]:text-[1rem]
+                                
+                                max-[768px]:text-[1.35rem]'
                             />
                         </a>
                         <a href={project.live_url} target='_blank' rel='noreferrer' className='
@@ -80,34 +112,51 @@ function ProjectCard({ project }) {
                                 text-[1rem] 
                                 text-[#45ffcacc] 
                                 hover:text-[#45FFCA] 
-                                hover:cursor-pointer'
+                                
+                                max-[1024px]:text-[0.85rem]
+                                
+                                max-[768px]:text-[1.1rem]'
                             />
                         </a>
                     </div>
                 </div>
-                    <p className="
-                        desc 
-                        text-[#B9B9B9] 
-                        text-[0.85rem]
+                <p className="
+                    desc 
+                    text-[#B9B9B9] 
+                    text-[0.85rem] 
+                    mt-3
                         
-                        max-[1440px]:text-[0.9rem]"
-                    >{project.description}</p>
-                    <div className="
-                        stack 
-                        mt-2 
-                        flex 
-                        flex-wrap 
-                        gap-2"
-                    >
-                        {project.stack?.map((feature, index) => {
-                                return (
-                                    <StackBox 
-                                        key={index} 
-                                        title={feature}
-                                    />
-                                )
-                        })}
-                    </div>
+                    max-[1440px]:text-[0.9rem]
+                        
+                    max-[1024px]:text-[0.75rem]
+                    max-[1024px]:mt-2
+                    
+                    max-[768px]:text-[0.85rem]
+                    max-[768px]:mt-4
+                    
+                    max-[426px]:text-[0.9rem]"
+                >{project.description}
+                </p>
+                <div className="
+                    stack 
+                    mt-5 
+                    flex 
+                    flex-wrap 
+                    gap-2
+                    
+                    max-[1024px]:mt-3
+                    
+                    max-[768px]:mt-5"
+                >
+                    {project.stack?.map((feature, index) => {
+                        return (
+                            <StackBox 
+                                key={index} 
+                                title={feature}
+                            />
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )

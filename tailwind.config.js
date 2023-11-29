@@ -5,7 +5,7 @@ module.exports = {
         extend: {
             lineHeight: {
                 '0': '0rem',
-            }
+            },
         },
     },
     plugins: [],

@@ -12,7 +12,11 @@ function UserInfo() {
             my-auto 
 
             max-[1440px]:px-2 
-            max-[1440px]:w-[48%]'
+            max-[1440px]:w-[48%]
+            
+            max-[768px]:w-[95%]
+            max-[768px]:mx-auto
+            max-[768px]:px-0'
         >
             <div className='
                 h-full 
@@ -27,7 +31,9 @@ function UserInfo() {
 
                     max-[1440px]:px-4
                     
-                    max-[1024px]:px-2"
+                    max-[1024px]:px-2
+                    
+                    max-[768px]:px-4"
                 >
                     <div className="
                         flex 
@@ -37,7 +43,11 @@ function UserInfo() {
 
                         max-[1440px]:w-[calc(100%-13.5rem)] 
                         
-                        max-[1024px]:w-[calc(100%-9.75rem)]"
+                        max-[1024px]:w-[calc(100%-9.75rem)]
+                        
+                        max-[768px]:w-[calc(100%-14.5rem)]
+                        
+                        max-[426px]:w-full"
                     >
                         <h1 className='
                             text-[#45FFCA] 
@@ -48,7 +58,12 @@ function UserInfo() {
 
                             max-[1440px]:text-[2.45rem] 
                             
-                            max-[1024px]:text-[1.45rem]'
+                            max-[1024px]:text-[1.45rem]
+                            
+                            max-[768px]:text-[2.55rem]
+                            
+                            max-[426px]:text-[2rem]
+                            max-[426px]:text-left'
                         >Hi, I'm <span className='text-[#FAFAFA]'>Priyanshu</span>
                         </h1>
                         <h2 className='
@@ -57,7 +72,12 @@ function UserInfo() {
                             text-right 
                             tracking-[0.15rem]
                             
-                            max-[1024px]:text-[0.625rem]'
+                            max-[1024px]:text-[0.625rem]
+                            
+                            max-[768px]:text-[1.15rem]
+                            
+                            max-[426px]:text-[0.9rem]
+                            max-[426px]:text-left'
                         >A <span className='text-[#FAFAFA]'>Web Developer</span> & Front-End Enthusiast
                         </h2>
                     </div>
@@ -72,7 +92,11 @@ function UserInfo() {
                         
                         max-[1440px]:w-[12rem]
                         
-                        max-[1024px]:w-[8.5rem]"
+                        max-[1024px]:w-[8.5rem]
+                        
+                        max-[768px]:w-[12.75rem]
+                        
+                        max-[426px]:hidden"
                     >
                         <img src={image} alt="User" />
                     </div>
@@ -86,7 +110,13 @@ function UserInfo() {
                     max-[1440px]:mt-16
                     
                     max-[1024px]:mt-10
-                    max-[1024px]:px-6"
+                    max-[1024px]:px-6
+                    
+                    max-[768px]:px-12
+                    max-[768px]:mt-12
+                    
+                    max-[426px]:px-4
+                    max-[426px]:mt-12"
                 >
                     <p className='
                         text-[#45FFCA] 
@@ -96,7 +126,14 @@ function UserInfo() {
                         max-[1440px]:text-[1.1rem]
                         
                         max-[1024px]:text-[0.75rem]
-                        max-[1024px]:tracking-[0.025rem]'
+                        max-[1024px]:tracking-[0.025rem]
+                        
+                        max-[768px]:text-[0.95rem]
+                        max-[768px]:tracking-[0.04rem]
+                        
+                        max-[426px]:text-[0.85rem]
+                        max-[426px]:tracking-[0.03rem]
+                        max-[426px]:leading-6'
                     >Hello there! I'm a 22-year-old guy with a love for web development. I enjoy creating beautiful and accurate websites that you can see and interact with. Learning about new technologies excites me, and I always keep an eye out for the latest trends.
                     </p>
                     <p className='
@@ -108,7 +145,14 @@ function UserInfo() {
                         max-[1440px]:text-[1.1rem]
                         
                         max-[1024px]:text-[0.75rem]
-                        max-[1024px]:tracking-[0.025rem]'
+                        max-[1024px]:tracking-[0.025rem]
+                        
+                        max-[768px]:text-[0.95rem]
+                        max-[768px]:tracking-[0.04rem]
+                        
+                        max-[426px]:text-[0.85rem]
+                        max-[426px]:tracking-[0.03rem]
+                        max-[426px]:leading-6'
                     >Welcome to my portfolio website, where I share my passion for both web development and art!
                     </p>
                 </div>
@@ -121,7 +165,13 @@ function UserInfo() {
                     max-[1440px]:mt-16
 
                     max-[1024px]:mt-8
-                    max-[1024px]:px-6"
+                    max-[1024px]:px-6
+                    
+                    max-[768px]:px-12
+                    max-[768px]:mt-10
+                    
+                    max-[426px]:px-4
+                    max-[426px]:mt-12"
                 >
                     <button className='
                         bg-[#45FFCA] 
@@ -138,7 +188,15 @@ function UserInfo() {
                         
                         max-[1024px]:text-[0.75rem]
                         max-[1024px]:px-[1rem]
-                        max-[1024px]:py-[0.55rem]'
+                        max-[1024px]:py-[0.55rem]
+                        
+                        max-[768px]:text-[1rem]
+                        max-[768px]:px-[1.25rem]
+                        max-[768px]:py-[0.7rem]
+                        
+                        max-[426px]:text-[1rem]
+                        max-[426px]:px-[1.25rem]
+                        max-[426px]:py-[0.75rem]'
                     >Download CV
                     </button>
                 </div>
@@ -153,48 +211,76 @@ function UserInfo() {
                     
                     max-[1024px]:mt-8
                     max-[1024px]:px-6
-                    max-[1024px]:gap-2"
+                    max-[1024px]:gap-2
+                    
+                    max-[768px]:gap-4
+                    max-[768px]:px-12
+                    max-[768px]:mt-8
+                    
+                    max-[426px]:px-4
+                    max-[426px]:mt-6
+                    max-[426px]:gap-3"
                 >
-                    <FontAwesomeIcon icon={faLinkedinIn} className='
-                        text-[1.15rem] 
-                        p-2 
-                        text-[#45FFCA] 
-                        hover:cursor-pointer 
+                    <a href="https://www.linkedin.com/in/PriyanshuSharma0326" target='_blank' rel='noreferrer' className='leading-3'>
+                        <FontAwesomeIcon icon={faLinkedinIn} className='
+                            text-[1.15rem] 
+                            p-2 
+                            text-[#45FFCA]  
 
-                        max-[1440px]:text-[1.35rem]
-                        
-                        max-[1024px]:text-[1.1rem]'
-                    />
-                    <FontAwesomeIcon icon={faGithub} className='
-                        text-[1.25rem] 
-                        p-2 
-                        text-[#45FFCA] 
-                        hover:cursor-pointer
-                        
-                        max-[1440px]:text-[1.45rem]
-                        
-                        max-[1024px]:text-[1.15rem]'
-                    />
-                    <FontAwesomeIcon icon={faInstagram} className='
-                        text-[1.35rem] 
-                        p-2 
-                        text-[#45FFCA] 
-                        hover:cursor-pointer
-                        
-                        max-[1440px]:text-[1.55rem]
-                        
-                        max-[1024px]:text-[1.25rem]'
-                    />
-                    <FontAwesomeIcon icon={faXTwitter} className='
-                        text-[1.15rem] 
-                        p-2 
-                        text-[#45FFCA] 
-                        hover:cursor-pointer
-                        
-                        max-[1440px]:text-[1.35rem]
-                        
-                        max-[1024px]:text-[1.1rem]'
-                    />
+                            max-[1440px]:text-[1.35rem]
+                            
+                            max-[1024px]:text-[1.1rem]
+                            
+                            max-[768px]:text-[1.25rem]
+                            
+                            max-[426px]:text-[1.5rem]'
+                        />
+                    </a>
+                    <a href="https://www.github.com/PriyanshuSharma0326" target='_blank' rel='noreferrer' className='leading-3'>
+                        <FontAwesomeIcon icon={faGithub} className='
+                            text-[1.25rem] 
+                            p-2 
+                            text-[#45FFCA] 
+                            
+                            max-[1440px]:text-[1.45rem]
+                            
+                            max-[1024px]:text-[1.15rem]
+                            
+                            max-[768px]:text-[1.35rem]
+                            
+                            max-[426px]:text-[1.5rem]'
+                        />
+                    </a>
+                    <a href="https://www.instagram.com/xtechilad.jpg" target='_blank' rel='noreferrer' className='leading-3'>
+                        <FontAwesomeIcon icon={faInstagram} className='
+                            text-[1.35rem] 
+                            p-2 
+                            text-[#45FFCA] 
+                            
+                            max-[1440px]:text-[1.55rem]
+                            
+                            max-[1024px]:text-[1.25rem]
+                            
+                            max-[768px]:text-[1.45rem]
+                            
+                            max-[426px]:text-[1.6rem]'
+                        />
+                    </a>
+                    <a href="https://www.x.com/xtechilad" target='_blank' rel='noreferrer' className='leading-3'>
+                        <FontAwesomeIcon icon={faXTwitter} className='
+                            text-[1.15rem] 
+                            p-2 
+                            text-[#45FFCA] 
+                            
+                            max-[1440px]:text-[1.35rem]
+                            
+                            max-[1024px]:text-[1.1rem]
+                            
+                            max-[768px]:text-[1.25rem]
+                            
+                            max-[426px]:text-[1.4rem]'
+                        />
+                    </a>
                 </div>
             </div>
         </div>
