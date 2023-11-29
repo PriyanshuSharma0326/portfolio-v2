@@ -1,7 +1,87 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Element } from 'react-scroll';
+import FormInput from './FormInput';
+import emailjs from '@emailjs/browser';
+import toast from "react-hot-toast";
+import { validateEmail } from '../utils/utils';
 
 function ContactForm() {
+    const defaultFormFields = {
+        name:'',
+        email: '',
+        message: ''
+    };
+
+    const defaultFormErrors = {
+        nameError:'',
+        emailError: '',
+        messageError: ''
+    };
+
+    const [formInputs, setFormInputs] = useState(defaultFormFields);
+    const [formErrors, setFormErrors] = useState(defaultFormErrors);
+
+    const form = useRef();
+
+    const changeHandler = (e) => {
+        const { name, value } = e.target;
+        setFormInputs({...formInputs, [name]: value});
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        const validationErrors = {};
+
+        if(!formInputs.name.trim()) {
+            validationErrors.nameError = 'Name is required';
+        }
+
+        if(!formInputs.email.trim()) {
+            validationErrors.emailError = 'Email is required';
+        }
+        else if(!validateEmail(formInputs.email.trim())) {
+            validationErrors.emailError = 'Email is badly formatted';
+        }
+
+        if(!formInputs.message.trim()) {
+            validationErrors.messageError = 'Message is required';
+        }
+
+        if(Object.keys(validationErrors).length > 0) {
+            setFormErrors(validationErrors);
+            return;
+        }
+
+        if(Object.keys(validationErrors).length === 0) {
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+                toast('Message Sent!',
+                    {
+                        icon: '📩',
+                        style: {
+                            borderRadius: '10px',
+                            background: '#001D56',
+                            color: '#45FFCA',
+                        },
+                    }
+                );
+                setFormInputs(defaultFormFields);
+                setFormErrors(defaultFormErrors);
+            }, (error) => {
+                toast.error('Error Sending Message!',
+                    {
+                        style: {
+                            borderRadius: '10px',
+                            background: '#001D56',
+                            color: '#45FFCA',
+                        },
+                    }
+                );
+            });
+        }
+    }
+
     return (
         <Element name='Contact' id='Contact' className='
             h-full 
@@ -51,7 +131,7 @@ function ContactForm() {
                     max-[768px]:text-[2.25rem]'
                 >Contact Me</h1>
 
-                <form action="" className='
+                <form ref={form} id='message-form' onSubmit={submitHandler} className='
                     h-full 
                     flex 
                     flex-col 
@@ -59,126 +139,48 @@ function ContactForm() {
                     
                     max-[768px]:gap-[1.3rem]'
                 >
-                    <div className="
-                        input-group 
-                        flex 
-                        flex-col 
-                        gap-2"
-                    >
-                        <label htmlFor="name" className='
-                            text-[#FAFAFA]  
-                            text-[0.95rem] 
-                            w-fit
-                            
-                            max-[1024px]:text-[0.8rem]
-                            
-                            max-[768px]:text-[0.95rem]
-                            
-                            max-[426px]:text-[1.05rem]'
-                        >Name</label>
-                        <input id='name' type="text" placeholder='Your Name' className='
-                            px-3 
-                            py-2 
-                            outline-none 
-                            rounded-md 
-                            bg-[#FAFAFA1A] 
-                            text-[#FAFAFA]
-                            
-                            max-[1024px]:px-2 
-                            max-[1024px]:py-[0.4rem]
-                            max-[1024px]:text-[0.85rem]
-                            max-[1024px]:rounded-[4px]
-                            
-                            max-[768px]:text-[1rem]
-                            max-[768px]:px-3
-                            max-[768px]:py-2
-                            
-                            max-[426px]:text-[1.05rem]'
-                        />
-                    </div>
+                    <FormInput 
+                        labelText='Name' 
+                        isInputType={true} 
+                        errorText={formErrors.nameError} 
+                        inputOptions={{
+                            type: 'text',
+                            id: 'name',
+                            name: 'name',
+                            onChange: changeHandler,
+                            value: formInputs.name,
+                            placeholder: 'Your Name'
+                        }}
+                    />
 
-                    <div className="
-                        input-group 
-                        flex 
-                        flex-col 
-                        gap-2"
-                    >
-                        <label htmlFor="email" className='
-                            text-[#FAFAFA] 
-                            text-[0.95rem] 
-                            w-fit
-                            
-                            max-[1024px]:text-[0.8rem]
-                            
-                            max-[768px]:text-[0.95rem]
-                            
-                            max-[426px]:text-[1.05rem]'
-                        >Email</label>
-                        <input id='email' type="email" placeholder='Your Email' className='
-                            px-3 
-                            py-2 
-                            outline-none 
-                            rounded-md 
-                            bg-[#FAFAFA1A] 
-                            text-[#FAFAFA]
-                            
-                            max-[1024px]:px-2 
-                            max-[1024px]:py-[0.4rem]
-                            max-[1024px]:text-[0.85rem]
-                            max-[1024px]:rounded-[4px]
-                            
-                            max-[768px]:text-[1rem]
-                            max-[768px]:px-3
-                            max-[768px]:py-2
-                            
-                            max-[426px]:text-[1.05rem]'
-                        />
-                    </div>
+                    <FormInput 
+                        labelText='Email' 
+                        isInputType={true} 
+                        errorText={formErrors.emailError} 
+                        inputOptions={{
+                            type: 'text',
+                            id: 'email',
+                            name: 'email',
+                            onChange: changeHandler,
+                            value: formInputs.email,
+                            placeholder: 'Your Email'
+                        }}
+                    />
 
-                    <div className="
-                        input-group 
-                        flex 
-                        flex-col 
-                        gap-2"
-                    >
-                        <label htmlFor="message" className='
-                            text-[#FAFAFA] 
-                            text-[0.95rem] 
-                            w-fit
-                            
-                            max-[1024px]:text-[0.8rem]
-                            
-                            max-[768px]:text-[0.95rem]
-                            
-                            max-[426px]:text-[1.05rem]'
-                        >Your Message</label>
-                        <textarea name="" id="message" placeholder='Type your message here' className='
-                            no-scrollbar 
-                            px-3 
-                            py-2 
-                            outline-none 
-                            rounded-md 
-                            bg-[#FAFAFA1A] 
-                            text-[#FAFAFA] 
-                            h-48 
-                            resize-none
-                            
-                            max-[1024px]:px-2 
-                            max-[1024px]:py-[0.4rem]
-                            max-[1024px]:text-[0.85rem]
-                            max-[1024px]:h-[8.5rem]
-                            max-[1024px]:rounded-[4px]
-                            
-                            max-[768px]:text-[1rem]
-                            max-[768px]:h-40
-                            max-[768px]:px-3
-                            max-[768px]:py-2
-                            
-                            max-[426px]:text-[1.05rem]' 
-                        />
-                    </div>
+                    <FormInput 
+                        labelText='Your Message' 
+                        isInputType={false} 
+                        errorText={formErrors.messageError} 
+                        inputOptions={{
+                            name: 'message',
+                            id: 'message',
+                            onChange: changeHandler,
+                            value: formInputs.message,
+                            placeholder: 'Type your message here'
+                        }}
+                    />
 
-                    <button className='
+                    <button type='submit' form='message-form' className='
                         bg-[#45FFCA] 
                         text-[#001C30] 
                         rounded-md 
