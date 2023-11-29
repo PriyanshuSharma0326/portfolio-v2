@@ -15,10 +15,10 @@ function Main() {
     const transitionNavbar = () => {
         if(window?.innerWidth > 426) {
             if(window?.scrollY > 665) {
-                if(window?.scrollY > 1150) {
+                if(window?.scrollY > 1193) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 2352) {
+                    if(window?.scrollY > 2476) {
                         setTitle('Contact')
                     }
                     else {
@@ -35,11 +35,11 @@ function Main() {
             }
         }
         else {
-            if(window?.scrollY > 560) {
-                if(window?.scrollY > 1239) {
+            if(window?.scrollY > 624) {
+                if(window?.scrollY > 1369) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 2930) {
+                    if(window?.scrollY > 3082) {
                         setTitle('Contact')
                     }
                     else {
@@ -51,7 +51,7 @@ function Main() {
                     setFixedProjectsTitle(false);
                 }
             }
-            else if(window?.scrollY < 560){
+            else if(window?.scrollY < 624){
                 setFixedSkillTitle(false);
             }
         }
@@ -147,10 +147,33 @@ function Main() {
                     no-scrollbar
                     
                     max-[768px]:overflow-visible
-                    max-[768px]:w-full"
+                    max-[768px]:w-full
+                    
+                    max-[426px]:mt-10"
                 >
-                    <div className={`
+                    <div className='
                         hidden 
+                        z-30 
+                        skills-section-title 
+                        px-[1.25rem] 
+                        py-4 
+                        w-full 
+                        font-semibold 
+
+                        max-[768px]:block 
+
+                        max-[426px]:px-4'
+                    >
+                        <h1 className={`
+                            text-[#45FFCA] 
+                            text-[1.3rem] 
+                            uppercase 
+                            ${fixedSkillTitle && 'text-transparent'}`}
+                        >Skills</h1>
+                    </div>
+
+                    {fixedSkillTitle && <div className={`
+                        hidden
                         z-30 
                         skills-section-title 
                         px-[1.25rem] 
@@ -162,14 +185,15 @@ function Main() {
 
                         max-[426px]:px-4
 
-                        ${fixedSkillTitle && 'fixed px-10 max-[426px]:px-[1.75rem] m-0 top-[-0.05rem] left-0 bg-[#000C18ED]'}`}
+                        ${fixedSkillTitle && 'fixed px-10 max-[426px]:px-[1.65rem] m-0 top-[-0.05rem] left-0 bg-[#000C18ED]'}`}
                     >
                         <h1 className='
                             text-[#45FFCA] 
                             text-[1.3rem] 
                             uppercase'
                         >Skills</h1>
-                    </div>
+                    </div>}
+                    
                     <Element name='Skills' id='Skills' className="
                         skills 
                         py-12 
@@ -218,7 +242,49 @@ function Main() {
                         
                         max-[426px]:gap-10"
                     >
-                        <div className={`
+                        <div className='
+                            hidden 
+                            z-30 
+                            skills-section-title 
+                            px-[1.25rem] 
+                            py-4 
+                            w-full 
+                            font-semibold 
+
+                            max-[768px]:block 
+
+                            max-[426px]:px-4'
+                        >
+                            <h1 className={`
+                                text-[#45FFCA] 
+                                text-[1.3rem] 
+                                uppercase 
+                                ${fixedProjectsTitle && 'text-transparent'}`}
+                            >{title}</h1>
+                        </div>
+
+                        {fixedProjectsTitle && <div className={`
+                            hidden
+                            z-30 
+                            skills-section-title 
+                            px-[1.25rem] 
+                            py-4 
+                            w-full 
+                            font-semibold 
+
+                            max-[768px]:block 
+
+                            max-[426px]:px-4
+
+                            ${fixedProjectsTitle && 'fixed px-10 max-[426px]:px-[1.65rem] m-0 top-[-0.05rem] left-0 bg-[#000C18ED]'}`}
+                        >
+                            <h1 className='
+                                text-[#45FFCA] 
+                                text-[1.3rem] 
+                                uppercase'
+                            >{title}</h1>
+                        </div>}
+                        {/* <div className={`
                             hidden 
                             z-30 
                             skills-section-title 
@@ -235,7 +301,7 @@ function Main() {
                             ${fixedProjectsTitle && 'fixed px-10 max-[426px]:px-[1.75rem] m-0 top-[-0.05rem] left-0 bg-[#000C18ED]'}`}
                         >
                             <h1 className='text-[#45FFCA] text-[1.3rem] uppercase'>{title}</h1>
-                        </div>
+                        </div> */}
                         {projects.map(project => {
                             return (
                                 <ProjectCard 

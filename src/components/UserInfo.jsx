@@ -116,7 +116,7 @@ function UserInfo() {
                     max-[768px]:mt-12
                     
                     max-[426px]:px-4
-                    max-[426px]:mt-12"
+                    max-[426px]:mt-[3.5rem]"
                 >
                     <p className='
                         text-[#45FFCA] 
@@ -171,7 +171,7 @@ function UserInfo() {
                     max-[768px]:mt-10
                     
                     max-[426px]:px-4
-                    max-[426px]:mt-12"
+                    max-[426px]:mt-[3.5rem]"
                 >
                     <button className='
                         bg-[#45FFCA] 
@@ -218,7 +218,7 @@ function UserInfo() {
                     max-[768px]:mt-8
                     
                     max-[426px]:px-4
-                    max-[426px]:mt-6
+                    max-[426px]:mt-[1.75rem]
                     max-[426px]:gap-3"
                 >
                     <a href="https://www.linkedin.com/in/PriyanshuSharma0326" target='_blank' rel='noreferrer' className='leading-3'>

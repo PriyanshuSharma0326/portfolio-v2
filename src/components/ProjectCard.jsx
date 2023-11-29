@@ -74,7 +74,7 @@ function ProjectCard({ project }) {
                         
                         max-[768px]:text-[1.2rem]
                         
-                        max-[426px]:text-[1.25rem]"
+                        max-[426px]:text-[1.15rem]"
                     >{project.project_title}
                     </h1>
 
