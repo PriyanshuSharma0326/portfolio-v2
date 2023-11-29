@@ -7,23 +7,25 @@ export default function App() {
         <>
             <Main />
 
-            <AnimatedCursor 
-                color='69, 255, 202' 
-                clickables={[
-                    'a',
-                    'input[type="text"]',
-                    'input[type="email"]',
-                    'input[type="number"]',
-                    'input[type="submit"]',
-                    'input[type="image"]',
-                    'label[for]',
-                    'select',
-                    'textarea',
-                    'button',
-                    '.link',
-                    'img',
-                ]}
-            />
+            <div className="max-[1200px]:hidden">
+                <AnimatedCursor 
+                    color='69, 255, 202' 
+                    clickables={[
+                        'a',
+                        'input[type="text"]',
+                        'input[type="email"]',
+                        'input[type="number"]',
+                        'input[type="submit"]',
+                        'input[type="image"]',
+                        'label[for]',
+                        'select',
+                        'textarea',
+                        'button',
+                        '.link',
+                        'img',
+                    ]}
+                />
+            </div>
         </>
     );
 }
