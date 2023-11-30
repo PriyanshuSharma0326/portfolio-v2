@@ -108,7 +108,7 @@ function ContactForm() {
                 gap-6 
                 bg-[#001D35DD]
                 
-                max-[1440px]:h-[88.5%]
+                max-[1440px]:h-[95.5%]
                 max-[1440px]:my-auto
                 
                 max-[1024px]:h-full 

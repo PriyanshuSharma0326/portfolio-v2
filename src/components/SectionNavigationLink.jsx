@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './SectionNavigationLink.scss';
-import { DashboardContext } from '../context/dashboard-context';
 import { Link } from 'react-scroll';
 
 function SectionNavigationLink({ sectionTitle }) {
-    const { setSelectedSection } = useContext(DashboardContext);
-
     return (
         <Link 
             to={sectionTitle} 
@@ -13,7 +10,7 @@ function SectionNavigationLink({ sectionTitle }) {
             smooth={true} 
             duration={500} 
             containerId='ListsContainer' 
-            onClick={() => setSelectedSection(sectionTitle)} 
+            activeClass='active'
             className='link' 
         >
             <div className='bar'></div>

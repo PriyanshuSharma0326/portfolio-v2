@@ -11,7 +11,7 @@ import { StyleContext } from '../context/style-context';
 
 function Main() {
     const { title, setTitle, fixedSkillTitle, setFixedSkillTitle, fixedProjectsTitle, setFixedProjectsTitle } = useContext(StyleContext);
-
+    
     const transitionNavbar = () => {
         if(window?.innerWidth > 426) {
             if(window?.scrollY > 665) {
@@ -114,7 +114,7 @@ function Main() {
                     gap-2 
                     py-40
 
-                    max-[1440px]:py-52
+                    max-[1440px]:py-48
                     
                     max-[1024px]:py-[8.25rem]
                     
@@ -284,24 +284,6 @@ function Main() {
                                 uppercase'
                             >{title}</h1>
                         </div>}
-                        {/* <div className={`
-                            hidden 
-                            z-30 
-                            skills-section-title 
-                            px-[1.25rem] 
-                            py-4 
-                            w-full 
-                            font-semibold 
-
-                            max-[768px]:block 
-
-                            max-[426px]:px-4
-                            max-[426px]:mb-[-1rem]
-
-                            ${fixedProjectsTitle && 'fixed px-10 max-[426px]:px-[1.75rem] m-0 top-[-0.05rem] left-0 bg-[#000C18ED]'}`}
-                        >
-                            <h1 className='text-[#45FFCA] text-[1.3rem] uppercase'>{title}</h1>
-                        </div> */}
                         {projects.map(project => {
                             return (
                                 <ProjectCard 
