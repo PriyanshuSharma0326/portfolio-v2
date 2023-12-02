@@ -4,6 +4,7 @@ import FormInput from './FormInput';
 import emailjs from '@emailjs/browser';
 import toast from "react-hot-toast";
 import { validateEmail } from '../utils/utils';
+import { SyncLoader } from 'react-spinners';
 
 function ContactForm() {
     const defaultFormFields = {
@@ -20,6 +21,7 @@ function ContactForm() {
 
     const [formInputs, setFormInputs] = useState(defaultFormFields);
     const [formErrors, setFormErrors] = useState(defaultFormErrors);
+    const [loading, setLoading] = useState(false);
 
     const form = useRef();
 
@@ -54,6 +56,7 @@ function ContactForm() {
         }
 
         if(Object.keys(validationErrors).length === 0) {
+            setLoading(true);
             emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 toast('Message Sent!',
@@ -68,6 +71,7 @@ function ContactForm() {
                 );
                 setFormInputs(defaultFormFields);
                 setFormErrors(defaultFormErrors);
+                setLoading(false);
             }, (error) => {
                 toast.error('Error Sending Message!',
                     {
@@ -181,25 +185,19 @@ function ContactForm() {
                         }}
                     />
 
-                    <button type='submit' form='message-form' className='
-                        bg-[#45FFCA] 
-                        text-[#001C30] 
-                        rounded-md 
-                        py-[0.65rem] 
-                        font-semibold 
-                        text-[0.95rem] 
-                        uppercase
-                        
-                        max-[1024px]:py-[0.55rem]
-                        max-[1024px]:text-[0.85rem]
-                        max-[1024px]:rounded-[4px]
-                        
-                        max-[768px]:text-[0.95rem]
-                        max-[768px]:py-[0.7rem]'
-                    >Send</button>
+                    {!loading ? 
+                        <button type='submit' form='message-form' className='bg-[#45FFCA] text-[#001C30] rounded-md py-[0.65rem] font-semibold text-[0.95rem] uppercase
+                            
+                            max-[1024px]:py-[0.55rem] max-[1024px]:text-[0.85rem] max-[1024px]:rounded-[4px]
+                            
+                            max-[768px]:text-[0.95rem] max-[768px]:py-[0.7rem]'
+                        >Send</button> : 
+                        <div className="w-full text-center py-[0.625rem]">
+                            <SyncLoader size={8} color="#36d7b7" />
+                        </div>
+                    }
                 </form>
             </div>
-            
         </Element>
     )
 }
