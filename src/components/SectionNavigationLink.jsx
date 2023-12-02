@@ -9,7 +9,7 @@ function SectionNavigationLink({ sectionTitle }) {
             spy={true} 
             smooth={true} 
             duration={800} 
-            containerId='ListsContainer' 
+            containerId='List' 
             activeClass='active'
             className='link' 
         >
