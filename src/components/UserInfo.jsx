@@ -10,6 +10,8 @@ function UserInfo() {
             w-1/2 
             px-8 
             my-auto 
+            font-hedvig
+            select-none
 
             max-[1440px]:px-2 
             max-[1440px]:w-[48%]
@@ -134,7 +136,7 @@ function UserInfo() {
                         max-[426px]:text-[0.85rem]
                         max-[426px]:tracking-[0.03rem]
                         max-[426px]:leading-6'
-                    >Hello there! I'm a 22-year-old guy with a love for web development. I enjoy creating beautiful and accurate websites that you can see and interact with. Learning about new technologies excites me, and I always keep an eye out for the latest trends.
+                    >Hello there! I'm Priyanshu Sharma, an enthusiast deeply invested in web development. Crafting visually appealing and functional websites is my forte, and I take pleasure in ensuring they provide an engaging user experience. The thrill of exploring new technologies is something I cherish, always staying attuned to the latest trends.
                     </p>
                     <p className='
                         text-[#45FFCA] 
@@ -153,7 +155,7 @@ function UserInfo() {
                         max-[426px]:text-[0.85rem]
                         max-[426px]:tracking-[0.03rem]
                         max-[426px]:leading-6'
-                    >Welcome to my portfolio website, where I share my passion for both web development and art!
+                    >Welcome to my portfolio website, a space where I showcase my passion for web development and art!
                     </p>
                 </div>
 

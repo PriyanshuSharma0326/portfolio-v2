@@ -15,6 +15,7 @@ function ProjectCard({ project }) {
             border-[1px] 
             border-transparent 
             flex 
+            select-none
             hover:bg-[#BABABA11] 
             hover:border-[#FAFAFA23] 
             
@@ -69,6 +70,8 @@ function ProjectCard({ project }) {
                         text-[1.1rem]
                         font-semibold 
                         text-[#FAFAFA]
+                        font-hedvig
+                        tracking-[0.05rem]
                         
                         max-[1024px]:text-[0.95rem]
                         

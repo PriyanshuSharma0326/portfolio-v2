@@ -20,6 +20,8 @@ function SkillCard({ icon, title }) {
             flex-col 
             gap-2 
             items-center
+            font-hedvig
+            select-none
             
             max-[1024px]:gap-1
             

@@ -14,11 +14,11 @@ function Main() {
     
     const transitionNavbar = () => {
         if(window?.innerWidth > 426) {
-            if(window?.scrollY > 665) {
-                if(window?.scrollY > 1193) {
+            if(window?.scrollY > 644) {
+                if(window?.scrollY > 1190) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 2476) {
+                    if(window?.scrollY > 2490) {
                         setTitle('Contact')
                     }
                     else {
@@ -30,16 +30,16 @@ function Main() {
                     setFixedProjectsTitle(false);
                 }
             }
-            else if(window?.scrollY < 665){
+            else if(window?.scrollY < 644){
                 setFixedSkillTitle(false);
             }
         }
         else {
             if(window?.scrollY > 624) {
-                if(window?.scrollY > 1369) {
+                if(window?.scrollY > 1364) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 3082) {
+                    if(window?.scrollY > 3000) {
                         setTitle('Contact')
                     }
                     else {
@@ -114,7 +114,7 @@ function Main() {
                     gap-2 
                     py-40
 
-                    max-[1440px]:py-48
+                    max-[1440px]:py-[13.5rem]
                     
                     max-[1024px]:py-[8.25rem]
                     

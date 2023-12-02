@@ -15,6 +15,8 @@ function FormInput({ labelText, inputOptions, isInputType, errorText }) {
                     text-[#FAFAFA]  
                     text-[0.95rem] 
                     w-fit
+                    font-hedvig
+                    select-none
                                 
                     max-[1024px]:text-[0.8rem]
                                 
@@ -26,6 +28,8 @@ function FormInput({ labelText, inputOptions, isInputType, errorText }) {
                 <p className="
                     text-[0.85rem] 
                     text-red-400
+                    font-hedvig
+                    select-none
                     
                     max-[426px]:text-[0.95rem]"
                 >{errorText}</p>
@@ -40,6 +44,8 @@ function FormInput({ labelText, inputOptions, isInputType, errorText }) {
                     rounded-md 
                     bg-[#FAFAFA1A] 
                     text-[#FAFAFA]
+                    font-hedvig
+                    select-none
                                 
                     max-[1024px]:px-2 
                     max-[1024px]:py-[0.4rem]
@@ -62,6 +68,8 @@ function FormInput({ labelText, inputOptions, isInputType, errorText }) {
                     text-[#FAFAFA] 
                     h-48 
                     resize-none
+                    font-hedvig
+                    select-none
                             
                     max-[1024px]:px-2 
                     max-[1024px]:py-[0.4rem]

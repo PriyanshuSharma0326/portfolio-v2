@@ -125,6 +125,7 @@ function ContactForm() {
                     uppercase 
                     font-bold 
                     text-[2.5rem]
+                    select-none
                     
                     max-[1024px]:text-[1.75rem]
                     
