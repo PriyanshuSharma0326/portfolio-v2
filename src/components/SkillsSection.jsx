@@ -5,7 +5,7 @@ import SkillCard from './SkillCard';
 
 function SkillsSection() {
     return (
-        <Element name='Skills' id='Skills' className="skills py-12 grid grid-cols-4 h-[90%]
+        <Element name='Skills' id='Skills' className="skills py-12 grid grid-cols-4 h-[89%]
 
             max-[1440px]:h-[87%]
                         
