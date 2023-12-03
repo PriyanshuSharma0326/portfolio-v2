@@ -11,7 +11,6 @@ function UserInfo() {
             px-8 
             my-auto 
             font-hedvig
-            select-none
 
             max-[1440px]:px-2 
             max-[1440px]:w-[48%]
@@ -136,7 +135,7 @@ function UserInfo() {
                         max-[426px]:text-[0.85rem]
                         max-[426px]:tracking-[0.03rem]
                         max-[426px]:leading-6'
-                    >Hello there! I'm Priyanshu Sharma, an enthusiast deeply invested in web development. Crafting visually appealing and functional websites is my forte, and I take pleasure in ensuring they provide an engaging user experience. The thrill of exploring new technologies is something I cherish, always staying attuned to the latest trends.
+                    >Hello there! I'm a passionate web developer dedicated to creating visually stunning and functional websites. My expertise lies in crafting engaging user experiences, and I thrive on exploring the latest technologies to stay at the forefront of web development trends.
                     </p>
                     <p className='
                         text-[#45FFCA] 
