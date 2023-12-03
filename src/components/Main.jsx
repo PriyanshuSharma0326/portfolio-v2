@@ -10,12 +10,13 @@ function Main() {
     const { setTitle, fixedSkillTitle, setFixedSkillTitle, setFixedProjectsTitle } = useContext(StyleContext);
     
     const transitionNavbar = () => {
+        console.log(window?.scrollY);
         if(window?.innerWidth > 426) {
-            if(window?.scrollY > 689) {
-                if(window?.scrollY > 1232) {
+            if(window?.scrollY > 667) {
+                if(window?.scrollY > 1213) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 2400) {
+                    if(window?.scrollY > 2382) {
                         setTitle('Contact')
                     }
                     else {
@@ -27,16 +28,16 @@ function Main() {
                     setFixedProjectsTitle(false);
                 }
             }
-            else if(window?.scrollY < 689){
+            else if(window?.scrollY < 667){
                 setFixedSkillTitle(false);
             }
         }
         else {
-            if(window?.scrollY > 674) {
-                if(window?.scrollY > 1407) {
+            if(window?.scrollY > 624) {
+                if(window?.scrollY > 1365) {
                     setFixedSkillTitle(false);
                     setFixedProjectsTitle(true);
-                    if(window?.scrollY > 3030) {
+                    if(window?.scrollY > 2970) {
                         setTitle('Contact')
                     }
                     else {
@@ -48,7 +49,7 @@ function Main() {
                     setFixedProjectsTitle(false);
                 }
             }
-            else if(window?.scrollY < 674){
+            else if(window?.scrollY < 624){
                 setFixedSkillTitle(false);
             }
         }

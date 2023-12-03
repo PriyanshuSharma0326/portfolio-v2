@@ -11,6 +11,7 @@ function UserInfo() {
             px-8 
             my-auto 
             font-hedvig
+            select-none
 
             max-[1440px]:px-2 
             max-[1440px]:w-[48%]
