@@ -46,11 +46,16 @@ const skills = [
     },
     {
         id: 10,
+        icon: 'mongodb.png',
+        title: 'MongoDB'
+    },
+    {
+        id: 11,
         icon: `google-cloud.png`,
         title: 'Google Cloud',
     },
     {
-        id: 11,
+        id: 12,
         icon: `git.png`,
         title: 'Git',
     },
