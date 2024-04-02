@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './main.css';
+import './input.css';
 import App from './App.js';
 import { StyleContextProvider } from './context/style-context.js';
 import { Toaster } from 'react-hot-toast';

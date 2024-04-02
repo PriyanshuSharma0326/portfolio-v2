@@ -71,6 +71,8 @@ function Main() {
 
     return (
         <div className='absolute z-10 left-0 top-0 w-full h-full flex
+            bg-[rgb(0,12,24)]
+            bg-[linear-gradient(90deg,_rgba(0,12,24,1)_0%,_rgba(0,20,42,1)_100%)]
             
             max-[768px]:flex-col max-[768px]:pt-12 max-[768px]:relative max-[768px]:bg-[linear-gradient(180deg,_rgba(0,12,24,1)_0%,_rgba(0,20,42,1)_100%)]
             

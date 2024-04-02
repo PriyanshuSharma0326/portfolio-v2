@@ -29,7 +29,8 @@ function SkillCard({ icon, title }) {
         >
             <Tilt options={defaultOptions} className='
                 skill-card 
-                custom-gradient
+                bg-[rgb(224,224,224)]
+                bg-[linear-gradient(180deg,_rgba(224,224,224,1)_0%,_rgba(172,195,210,1)_65%,_rgba(126,162,188,1)_82%,_rgba(53,95,124,1)_100%)] 
                 border-3
                 border-[#45FFCA55] 
                 text-[#001b2e]
