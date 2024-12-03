@@ -176,7 +176,7 @@ function UserInfo() {
                     
                     max-[426px]:ml-4
                     max-[426px]:mt-[3.5rem]"
-                    href='https://drive.google.com/file/d/1nVtcbLqegg8xrELNQYOvJ59v8mXYY3T_/view?usp=sharing' 
+                    href='https://drive.google.com/file/d/1Mc96u_jtqC4e5z6e09062_QF9-KrB4aM/view?usp=drive_link' 
                     target='_blank' 
                     rel='noreferrer'
                 >
